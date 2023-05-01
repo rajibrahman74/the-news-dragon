@@ -3,6 +3,7 @@ import moment from "moment";
 import logo from "../../../assets/logo.png";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
+import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   const currentDate = moment().format("dddd, MMMM D, YYYY");
@@ -23,7 +24,13 @@ const Header = () => {
           Highlights: Germany vs Spain as...
         </Marquee>
       </div>
-      <Navbar className="d-flex justify-content-end align-align-items-center" collapseOnSelect expand="lg" bg="light" variant="light">
+      <Navbar
+        className="d-flex justify-content-end align-align-items-center"
+        collapseOnSelect
+        expand="lg"
+        bg="light"
+        variant="light"
+      >
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -33,7 +40,7 @@ const Header = () => {
               <Nav.Link href="#career">Careeer</Nav.Link>
             </Nav>
             <Nav className="d-flex align-items-center">
-              <Nav.Link href="#deets">Login</Nav.Link>
+              <Nav.Link href="#deets"><FaUserCircle/></Nav.Link>
               <Nav.Link eventKey={2} href="#memes">
                 <Button variant="dark">Dark</Button>
               </Nav.Link>

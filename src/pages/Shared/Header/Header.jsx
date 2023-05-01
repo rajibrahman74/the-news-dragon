@@ -9,7 +9,7 @@ const Header = () => {
   const currentDate = moment().format("dddd, MMMM D, YYYY");
 
   return (
-    <Container>
+    <Container className="mt-5">
       <div className="text-center">
         <img src={logo} alt="" />
         <p className="text-secondary">
@@ -40,7 +40,9 @@ const Header = () => {
               <Nav.Link href="#career">Careeer</Nav.Link>
             </Nav>
             <Nav className="d-flex align-items-center">
-              <Nav.Link href="#deets"><FaUserCircle/></Nav.Link>
+              <Nav.Link href="#deets">
+                <FaUserCircle />
+              </Nav.Link>
               <Nav.Link eventKey={2} href="#memes">
                 <Button variant="dark">Dark</Button>
               </Nav.Link>

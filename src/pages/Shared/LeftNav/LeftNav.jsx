@@ -12,11 +12,18 @@ const LeftNav = () => {
   return (
     <div>
       <h4>All categories</h4>
-      {categories.map((categorie) => (
-        <p key={categorie.id}>
-          <Link>{categorie.name}</Link>
-        </p>
-      ))}
+      <div className="ps-3">
+        {categories.map((categorie) => (
+          <p key={categorie.id}>
+            <Link
+              to={`/categorie/${categorie.id}`}
+              className="text-decoration-none text-black"
+            >
+              {categorie.name}
+            </Link>
+          </p>
+        ))}
+      </div>
     </div>
   );
 };
